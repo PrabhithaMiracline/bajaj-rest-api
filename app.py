@@ -8,6 +8,11 @@ DOB = "09-08-2004"
 EMAIL = "mprabhy@gmail.com"
 ROLL_NUMBER = "22BCB0006"
 
+@app.route("/", methods=["GET"])
+def home():
+    return {"message": "API is running! Use POST /bfhl to test."}, 200
+
+
 @app.route("/bfhl", methods=["POST"])
 def process_data():
     try:
